@@ -7,4 +7,90 @@ and open the template in the editor.
     Created on : Apr 22, 2017, 9:48:20 PM
     Author     : hybridplus
 */
+html, body{
+    height: 100%;
+}
+.game-container{
+    position: relative;
+    display: block;
+    height: 60vh;
+    width: 60vh;
+    border: 2px solid #bbada0;
+    box-sizing: border-box
+}
+.cell{
+    position: relative;
+    display: block;
+    float: left;
+    width: 25%;
+    height: 25%;
+    border: 2px solid #bbada0;
+    box-sizing: border-box;
+    background-color: #ccc0b3;
+}
 
+.number{
+    position: absolute;
+    display: block;
+    width: 25%;
+    height: 25%;
+    text-align: center;
+    line-height: 100%;
+    vertical-align: middle;
+    font-size: 15vh;
+    border: 2px solid #bbada0;
+    transition: .5s top, .5s right, .5s bottom, .5s left;
+    box-sizing: border-box;
+}
+
+.add{
+    animation-name: numberAnimation;
+    animation-duration: 4s;
+}
+
+@keyframes numberAnimation{
+    0% {font-size: 10vh;}
+    50% {font-size: 20vh;}
+    100% {font-size: 15vh;}
+}
+
+.row-0-col-0{top: 0;left: 0;}
+.row-0-col-1{top: 0;left: 25%;}
+.row-0-col-2{top: 0;left: 50%;}
+.row-0-col-3{top: 0;left: 75%;}
+.row-1-col-0{top: 25%;left: 0;}
+.row-1-col-1{top: 25%;left: 25%;}
+.row-1-col-2{top: 25%;left: 50%;}
+.row-1-col-3{top: 25%;left: 75%;}
+.row-2-col-0{top: 50%;left: 0;}
+.row-2-col-1{top: 50%;left: 25%;}
+.row-2-col-2{top: 50%;left: 50%;}
+.row-2-col-3{top: 50%;left: 75%;}
+.row-3-col-0{top: 75%;left: 0;}
+.row-3-col-1{top: 75%;left: 25%;}
+.row-3-col-2{top: 75%;left: 50%;}
+.row-3-col-3{top: 75%;left: 75%;}
+
+.number-2{background-color: #eee4da;color: #786f66;}
+.number-2:after{content: "2";}
+
+.number-4{background-color: #eee4da;color: #786f66;}
+.number-4:after{content: "4";}
+
+.number-8{background-color: #f59462;color: #fff;}
+.number-8:after{content: "8";}
+
+.number-16{background-color: #f59462;color: #fff;}
+.number-16:after{content: "16";}
+
+.number-32{background-color: #fa7859;color: #fff;}
+.number-32:after{content: "32";}
+
+.number-64{background-color: #f65e3b;color: #fff;}
+.number-64:after{content: "64";}
+
+.number-128{background-color: #edcf72;color: #fff;}
+.number-128:after{content: "128";}
+
+.number-256{background-color: #edcc61;color: #fff;}
+.number-256:after{content: "256";}
